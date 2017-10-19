@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE mapper
+
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.firstone.dao.PurchaseDao">
+
+    <select id="getPurchase" resultType="com.firstone.domain.Purchase">
+        select
+        id as "id",
+        user_id as "user.id",
+        product_id as "product.id",
+        paid_price as "paidPrice",
+        create_date as "createDate"
+        from Purchase
+        where id =#{id}
+    </select>
+
+    <insert id="insertPurchase" useGeneratedKeys="true" keyProperty="id" parameterType="com.firstone.domain.Purchase">
+        insert into Purchase (user_id,product_id,paid_price,create_date)
+        values (#{user.id},#{product.id},#{paidPrice},#{createDate})
+    </insert>
+
+    <update id="updatePurchase" parameterType="com.firstone.domain.Purchase">
+        update Purchase SET
+        user_id = #{user.id},
+        product_id = #{product.id},
+        paid_price = #{paidPrice},
+        create_date = #{createDate}
+        where id=#{id}
+    </update>
+
+    <select id="getPurchaseByUser" resultType="com.firstone.domain.Purchase">
+        select * from Purchase where user.id =#{id}
+    </select>
+
+
+</mapper>

@@ -9,7 +9,19 @@
 <mapper namespace="com.firstone.dao.UserDao">
 
     <select id="getUser" resultType="com.firstone.domain.User">
-        select * from user where id ='1'
+        select * from user where id =#{id}
     </select>
+
+    <insert id="insertUser" useGeneratedKeys="true" keyProperty="id" parameterType="com.firstone.domain.User">
+        insert into user (name,passwd,phone) values (#{name},#{passwd},#{phone})
+    </insert>
+
+    <update id="updateUser" parameterType="com.firstone.domain.User">
+        update user SET
+        name = #{name},
+        passwd = #{passwd},
+        phone = #{phone}
+        where id=#{id}
+    </update>
 
 </mapper>

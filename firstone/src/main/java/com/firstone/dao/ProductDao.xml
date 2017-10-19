@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE mapper
+
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.firstone.dao.ProductDao">
+
+    <select id="getProduct" resultType="com.firstone.domain.Product">
+        select * from Product where id =#{id}
+    </select>
+
+    <insert id="insertProduct" useGeneratedKeys="true" keyProperty="id" parameterType="com.firstone.domain.Product">
+        insert into Product (name,price,duration) values (#{name},#{price},#{duration})
+    </insert>
+
+    <update id="updateProduct" parameterType="com.firstone.domain.Product">
+        update Product SET
+        name = #{name},
+        price = #{price},
+        duration = #{duration}
+        where id=#{id}
+    </update>
+
+</mapper>

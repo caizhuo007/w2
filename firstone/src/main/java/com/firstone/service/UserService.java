@@ -23,7 +23,7 @@ public class UserService {
     public User getUser(String id){
         logger.debug("come to UserService");
 
-        return userDao.getUser();
+        return userDao.getUser(1);
     }
 
 }

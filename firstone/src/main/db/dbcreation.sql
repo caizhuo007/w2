@@ -19,6 +19,7 @@ create table user
 create table product
 (
   id INT UNSIGNED AUTO_INCREMENT,
+  name varchar(20) not null,
   price INT NOT null,
   duration INT NOT null,
   PRIMARY KEY ( `id` )
@@ -27,8 +28,9 @@ create table product
 create table purchase
 (
   id int UNSIGNED AUTO_INCREMENT,
-  create_date DATE NOT NULL ,
+  create_date DATETIME NOT NULL ,
   product_id INT NOT NULL,
   user_id INT NOT NULL,
+  paid_price INT NOT NULL,
   PRIMARY KEY ( `id` )
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;

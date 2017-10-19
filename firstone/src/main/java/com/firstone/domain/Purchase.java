@@ -6,17 +6,25 @@ import java.util.Date;
 public class Purchase {
 
     private int id;
-    private BigDecimal amount;
+    private int paidPrice;
     private Date createDate;
     private User user;
     private Product product;
 
-    public BigDecimal getAmount() {
-        return amount;
+    public int getPaidPrice() {
+        return paidPrice;
     }
 
-    public void setAmount(BigDecimal amount) {
-        this.amount = amount;
+    public void setPaidPrice(int paidPrice) {
+        this.paidPrice = paidPrice;
+    }
+
+    public Product getProduct() {
+        return product;
+    }
+
+    public void setProduct(Product product) {
+        this.product = product;
     }
 
     public Date getCreateDate() {
@@ -29,6 +37,14 @@ public class Purchase {
 
     public User getUser() {
         return user;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public void setUser(User user) {

@@ -24,8 +24,46 @@ public class UserDaoTest{
     @Test
     public void testGetUser(){
 
-        User user = userDao.getUser();
+        User user = userDao.getUser(1);
         Assert.assertTrue(user==null);
+    }
+
+    @Test
+    public void testInsertUser(){
+        User user = new User();
+        user.setName("jenny");
+        user.setPasswd("123");
+        user.setPhone("13817");
+        userDao.insertUser(user);
+        Assert.assertTrue(user.getId()!=0);
+
+        User userFromDB = userDao.getUser(user.getId());
+        Assert.assertEquals(user.getId(),userFromDB.getId());
+        Assert.assertEquals(user.getName(),userFromDB.getName());
+        Assert.assertEquals(user.getPasswd(),userFromDB.getPasswd());
+        Assert.assertEquals(user.getPhone(),userFromDB.getPhone());
+
+    }
+
+    @Test
+    public void testUpdateUser(){
+        User user = new User();
+        user.setName("jenny");
+        user.setPasswd("123");
+        user.setPhone("13817");
+        userDao.insertUser(user);
+        Assert.assertTrue(user.getId()!=0);
+
+        user.setName("jenny1");
+        user.setPasswd("1231");
+        user.setPhone("138171");
+        userDao.updateUser(user);
+
+        User userFromDB = userDao.getUser(user.getId());
+
+        Assert.assertEquals("jenny1",userFromDB.getName());
+        Assert.assertEquals("1231",userFromDB.getPasswd());
+        Assert.assertEquals("138171",userFromDB.getPhone());
     }
 
 }

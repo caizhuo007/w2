@@ -5,24 +5,16 @@ import java.util.Date;
 public class Product {
 
     private int id;
-    private Date startDate;
     private int duration; //number of months
     private int price;
+    private String name;
 
-    public Product(int id, Date startDate, int duration, int price) {
-        this.id = id;
-        this.startDate = startDate;
-        this.duration = duration;
-        this.price = price;
+    public String getName() {
+        return name;
     }
 
-    public Date getStartDate() {
-
-        return startDate;
-    }
-
-    public void setStartDate(Date startDate) {
-        this.startDate = startDate;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public int getDuration() {
