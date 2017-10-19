@@ -4,12 +4,16 @@ import java.util.Date;
 
 public class Product {
 
+    private int id;
     private Date startDate;
     private int duration; //number of months
+    private int price;
 
-    public Product(Date startDate, int duration) {
+    public Product(int id, Date startDate, int duration, int price) {
+        this.id = id;
         this.startDate = startDate;
         this.duration = duration;
+        this.price = price;
     }
 
     public Date getStartDate() {
@@ -27,5 +31,21 @@ public class Product {
 
     public void setDuration(int duration) {
         this.duration = duration;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
     }
 }

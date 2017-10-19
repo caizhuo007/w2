@@ -3,11 +3,13 @@ package com.firstone.domain;
 import java.math.BigDecimal;
 import java.util.Date;
 
-public class Payment {
+public class Purchase {
 
+    private int id;
     private BigDecimal amount;
-    private Date paytime;
+    private Date createDate;
     private User user;
+    private Product product;
 
     public BigDecimal getAmount() {
         return amount;
@@ -17,12 +19,12 @@ public class Payment {
         this.amount = amount;
     }
 
-    public Date getPaytime() {
-        return paytime;
+    public Date getCreateDate() {
+        return createDate;
     }
 
-    public void setPaytime(Date paytime) {
-        this.paytime = paytime;
+    public void setCreateDate(Date createDate) {
+        this.createDate = createDate;
     }
 
     public User getUser() {

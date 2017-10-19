@@ -1,24 +1,29 @@
 package com.firstone.service;
 
+import com.firstone.dao.UserDao;
+import com.firstone.domain.User;
+import org.apache.ibatis.session.SqlSession;
+import org.apache.ibatis.session.SqlSessionFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
-/**
- * 对于简单的网站，controller 可以直接使用DAO，不需要service；
- */
+import javax.annotation.Resource;
+
 @Service
-@Transactional
 public class UserService {
 
+    //添加一个日志器
+    private static final Logger logger = LoggerFactory.getLogger(UserService.class);
+
     @Autowired
-    private IUserDao userDao;
+    UserDao userDao;
 
-    public IUserDao getUserDao() {
-        return userDao;
+    public User getUser(String id){
+        logger.debug("come to UserService");
+
+        return userDao.getUser();
     }
 
-    public void setUserDao(IUserDao userDao) {
-        this.userDao = userDao;
-    }
 }

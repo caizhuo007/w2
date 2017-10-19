@@ -6,6 +6,6 @@
     <typeAliases>
         <typeAlias type="com.firstone.domain.User" alias="User" />
         <typeAlias type="com.firstone.domain.Product" alias="Product" />
-        <typeAlias type="com.firstone.domain.Payment" alias="Payment" />
+        <typeAlias type="com.firstone.domain.Purchase" alias="Payment" />
     </typeAliases>
 </configuration>
