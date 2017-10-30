@@ -5,7 +5,7 @@ body {
 
 header {
 	height:20vh;
-	background: #263238 url(header.jpg) no-repeat center center;
+	background: #263238 url(images/header.jpg) no-repeat center center;
 	display: flex;
 	justify-content:flex-start;
 	align-items:center;
@@ -62,13 +62,6 @@ footer div i {
 	padding-bottom: 1vh;
 }
 
-.content section {
-	display: flex;
-	flex-direction:row;
-	justify-content:center;
-
-}
-
 dd {
     -webkit-margin-start: 0;
 }
@@ -86,23 +79,5 @@ dd {
 	display: flex;
 	flex-direction:row;
 	flex-wrap:wrap;
-}
-
-.content img {
-	height: 40vh;
-	width: 40vh;
-}
-
-
-
-.content #login-button-container {
-	display: flex;
-	flex-direction:row;
-	justify-content:space-between;
-	width: 40vh;
-}
-
-.content #login-button-container button {
-	
 }
 
