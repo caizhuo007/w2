@@ -5,24 +5,7 @@
 
 }
 
-dd {
-    -webkit-margin-start: 0;
-}
 
-.content section dl dt{
-	max-width: 50vh;
-	margin-right: 5vh;
-}
-.content section dl dd {
-	max-width: 100vh;
-	min-width: 50vh;
-}
-
-.auto-title-content {
-	display: flex;
-	flex-direction:row;
-	flex-wrap:wrap;
-}
 
 .content img {
 	height: 40vh;

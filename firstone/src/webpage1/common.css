@@ -7,7 +7,7 @@ header {
 	height:20vh;
 	background: #263238 url(images/header.jpg) no-repeat center center;
 	display: flex;
-	justify-content:flex-start;
+	justify-content:space-between;
 	align-items:center;
     color: #757575;
     font-weight: 300;
