@@ -8,8 +8,16 @@
 
 <mapper namespace="com.firstone.dao.UserDao">
 
-    <select id="getUser" resultType="com.firstone.domain.User">
+    <select id="getUserById" resultType="com.firstone.domain.User">
         select * from user where id =#{id}
+    </select>
+
+    <select id="getUserByName" resultType="com.firstone.domain.User">
+        select * from user where name =#{name}
+    </select>
+
+    <select id="getUserByPhone" resultType="com.firstone.domain.User">
+        select * from user where phone =#{phone}
     </select>
 
     <insert id="insertUser" useGeneratedKeys="true" keyProperty="id" parameterType="com.firstone.domain.User">

@@ -6,7 +6,11 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface UserDao {
 
-    User getUser(int id);
+    User getUserById(int id);
+
+    User getUserByName(String name);
+
+    User getUserByPhone(String phone);
 
     int insertUser(User user);
 

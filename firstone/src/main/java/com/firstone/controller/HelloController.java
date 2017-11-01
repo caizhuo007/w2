@@ -16,16 +16,10 @@ public class HelloController {
     @Autowired
     private UserService userService;
 
-    @RequestMapping("/index")
+    @RequestMapping(value="/",produces="text/html;charset=UTF-8")
     public String sayHello(){
-        //输出日志文件
-        logger.info("the first jsp pages");
 
-        User user = userService.getUser("1");
-        if(user == null) logger.debug("user is null");
-        else logger.debug(user.getName());
-
-        return "index";
+        return "index/index.jsp";
     }
 
 }

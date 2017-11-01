@@ -24,7 +24,7 @@ public class UserDaoTest{
     @Test
     public void testGetUser(){
 
-        User user = userDao.getUser(1);
+        User user = userDao.getUserById(1);
         Assert.assertTrue(user==null);
     }
 
@@ -37,7 +37,7 @@ public class UserDaoTest{
         userDao.insertUser(user);
         Assert.assertTrue(user.getId()!=0);
 
-        User userFromDB = userDao.getUser(user.getId());
+        User userFromDB = userDao.getUserById(user.getId());
         Assert.assertEquals(user.getId(),userFromDB.getId());
         Assert.assertEquals(user.getName(),userFromDB.getName());
         Assert.assertEquals(user.getPasswd(),userFromDB.getPasswd());
@@ -59,7 +59,7 @@ public class UserDaoTest{
         user.setPhone("138171");
         userDao.updateUser(user);
 
-        User userFromDB = userDao.getUser(user.getId());
+        User userFromDB = userDao.getUserById(user.getId());
 
         Assert.assertEquals("jenny1",userFromDB.getName());
         Assert.assertEquals("1231",userFromDB.getPasswd());

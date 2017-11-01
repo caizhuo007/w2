@@ -1,0 +1,90 @@
+body {
+	margin:0 0 0 0;
+}
+
+a {
+	color:cornflowerblue;
+}
+
+header {
+	height:20vh;
+	background: #263238 url(images/header.jpg) no-repeat center center;
+	display: flex;
+	justify-content:space-between;
+	align-items:center;
+    color: #757575;
+    font-weight: 300;
+    font-size: 4vh;
+    padding-right: 2vh;
+    padding-left: 2vh;
+}
+
+<!-- redefine color-->
+.mdl-button{
+	color:#333333;
+}
+
+
+.content {
+	display: flex;
+	justify-content:center;
+	align-items: flex-start;
+	min-height: 70vh;
+	background-color: #FAFAFA;
+}
+
+footer{
+	height:10vh;
+	background: #263238;
+	font-size: 2vh;
+	display: flex;
+	flex-direction:column;
+	justify-content:center;
+	align-items:center;
+	color:#757575;
+
+}
+
+footer div {
+	display: flex;
+	flex-direction:row;
+}
+
+footer div i {
+	font-size: 4vh !important;
+	text-align: center;
+	width: 10vh;
+}
+
+.content {
+	display: flex;
+	flex-direction:column;
+	align-items:center;
+	padding-left: 10vh;
+	padding-right: 10vh;
+	padding-bottom: 1vh;
+}
+
+dd {
+    -webkit-margin-start: 0;
+	margin-left:0;
+}
+
+.content section dl dt{
+	max-width: 50vh;
+	margin-right: 5vh;
+}
+.content section dl dd {
+	max-width: 100vh;
+	min-width: 50vh;
+}
+
+.auto-title-content {
+	display: flex;
+	flex-direction:row;
+	flex-wrap:wrap;
+}
+
+.errormessage{
+	color:red;
+}
