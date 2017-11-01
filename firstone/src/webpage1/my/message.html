@@ -32,7 +32,7 @@
 
         <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
             for="demo-menu-lower-right">
-          <li class="mdl-menu__item">My Account</li>
+          <li class="mdl-menu__item" onclick='gotoMyPage()'>My Account</li>
           <li class="mdl-menu__item">My Message</li>
           <li class="mdl-menu__item">Sign out</li>
         </ul>
@@ -106,3 +106,7 @@
 </body>
 
 </html>
+<script type="text/javascript">
+function gotoMyPage (argument) {
+  window.location.href='../my/my.html';
+}</script>

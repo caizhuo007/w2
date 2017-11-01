@@ -36,7 +36,7 @@
     <section id='login-button-container'>
         <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored"> Signin
         </button>
-        <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Signup
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" onclick='gotoRegisterPage()'>Signup
         </button>
     </section>
 
@@ -56,3 +56,8 @@
 </body>
 
 </html>
+<script type="text/javascript">
+function gotoRegisterPage (argument) {
+    window.location.href="../register/register.html";
+}
+</script>
