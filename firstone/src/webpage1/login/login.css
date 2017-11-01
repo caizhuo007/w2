@@ -1,4 +1,3 @@
-
 .content section div {
 	display: flex;
 	flex-direction:column;
@@ -16,13 +15,3 @@
 }
 
 
-
-.content #messages {
-	min-height:50vh;
-}
-
-header #account{
-	font-weight: 150;
-    font-size: 2vh;
-
-}
